@@ -1,0 +1,106 @@
+.container {
+  padding-top: 35px;
+  padding-bottom: 0px;
+  background-color: var(--lightblue);
+}
+
+.headerSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leftSide {
+  margin-bottom: 30px;
+  padding: 15px;
+  width: 350px;
+}
+
+.title {
+  color: var(--darkblue);
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+.highlight {
+  color: var(--blue);
+}
+.subTitle {
+  color: var(--subtitle);
+}
+
+.rightSide {
+}
+
+.image {
+  width: 100%;
+  height: auto;
+}
+.buttonSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lookCarsBtn {
+  margin: 30px 0px;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: white;
+  text-align: center;
+  background-color: var(--orange);
+  border-radius: 10px;
+  text-decoration: none;
+}
+.icon {
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 960px) {
+  .image {
+    width: 500px;
+    height: 500px;
+  }
+
+  .headerSection {
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 50px;
+  }
+
+  .leftSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+  }
+
+  .title {
+    font-size: 45px;
+  }
+
+  .subTitle {
+    width: 418px;
+  }
+}
+
+@media (min-width: 450px) and (max-width: 960px) {
+  .image {
+    width: 400px;
+  }
+  .rightSide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .leftSide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .subTitle {
+    width: 300px;
+  }
+}

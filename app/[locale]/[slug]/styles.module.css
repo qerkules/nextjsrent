@@ -1,0 +1,216 @@
+.swiperContainer {
+  width: 100%;
+  padding-top: 43px;
+}
+
+.container {
+}
+
+.mySwiper {
+  height: 300px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiperSlide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiperSlide img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+.description {
+  display: flex;
+  justify-content: space-around;
+  padding: 0px 10px;
+  flex-wrap: wrap;
+}
+
+.box {
+  margin-bottom: 10px;
+  background-color: var(--lightblue);
+  padding: 15px;
+  border-radius: 10px;
+  width: 100px;
+  font-size: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--darkblue);
+}
+
+.titleSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 30px 0px;
+}
+
+.title {
+  font-size: 8px;
+}
+
+.carName {
+  font-size: 32px !important;
+  color: var(--darkblue);
+}
+
+.class {
+  font-size: 20px;
+  color: var(--orange);
+  font-weight: 400;
+}
+
+.priceSection {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.price {
+  font-size: 32px;
+  color: var(--darkblue);
+}
+
+.tip {
+  font-size: 8px;
+  padding-left: 10px;
+  color: var(--subtitle);
+}
+
+.bookNow {
+  padding: 7.5px 12.5px;
+  background-color: var(--blue);
+  color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.day {
+  font-size: 14px;
+}
+
+.aboutCar {
+  padding: 20px 30px;
+}
+
+.aboutCarTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--darkblue);
+  margin-bottom: 10px;
+}
+
+.carFeature {
+  margin-left: 30px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.featureIcon {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.cardTitle {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 400;
+}
+
+.cardSection {
+  margin-bottom: 30px;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.showAllCarsBtn {
+  padding: 7.5px 12.5px;
+  background-color: var(--orange);
+  color: white;
+  border-radius: 20px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.image {
+  width: 100%;
+}
+
+@media (min-width: 450px) and (max-width: 600px) {
+  .mySwiper {
+    height: 400px;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 960px) {
+  .mySwiper {
+    height: 600px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .leftSection {
+    grid-column-start: 1;
+    grid-column-end: 7;
+  }
+
+  .rightSection {
+    display: flex;
+    flex-direction: column;
+    grid-column-start: 7;
+    grid-column-end: 12;
+    padding-top: 20px;
+  }
+
+  .desktopVersion {
+    display: grid;
+    width: 100%;
+    gap: 10px;
+  }
+
+  .swiperContainer {
+    max-width: 800px;
+  }
+
+  .container {
+    padding: 50px 50px;
+  }
+
+  .mySwiper {
+    height: 600px;
+  }
+  .icon {
+    font-size: 14px;
+  }
+  .tip {
+    font-size: 10px;
+    margin-top: 5px;
+  }
+}

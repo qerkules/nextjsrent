@@ -1,0 +1,66 @@
+.container {
+  padding: 70px 10px 10px;
+  background-color: white;
+  width: 100%;
+  z-index: 99;
+}
+
+.contentContainer {
+  box-shadow: 0px 0px 1px 0.2px var(--blue);
+  border-radius: 20px;
+  position: relative;
+  padding: 30px 10px;
+}
+
+.closeBtnContainer {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 100%;
+  padding: 5px 10px;
+  background-color: white;
+  border: 1px solid gray;
+}
+
+.closeBtn {
+  color: gray;
+  font-size: 20px;
+}
+
+.carName {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.bookNow {
+  padding: 7.5px 12.5px;
+  background-color: var(--blue);
+  color: white;
+  border-radius: 10px;
+  font-size: 20px;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+}
+
+.pickupSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dFlex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.mWidth {
+  width: 45%;
+}
+
+.ageSelect {
+  width: 30px;
+}

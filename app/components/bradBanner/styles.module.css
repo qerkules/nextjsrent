@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  background-color: var(--lightblue);
+  padding: 20px 0px;
+}
+
+.margin {
+  margin-right: 20px;
+}
+
+.image {
+  width: 50px;
+  height: 50px;
+}

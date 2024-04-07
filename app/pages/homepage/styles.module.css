@@ -1,0 +1,64 @@
+.container {
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.cardTitle {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+.cardSection {
+  margin-bottom: 30px;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.showAllCarsBtn {
+  padding: 7.5px 12.5px;
+  background-color: var(--orange);
+  color: white;
+  border-radius: 20px;
+  font-size: 14px;
+  display: inline-block;
+}
+
+.classSection {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.classContainer {
+  border: 1px solid var(--blue);
+  padding: 15px 10px;
+  color: var(--darklue);
+  width: 170px;
+  border-radius: 35px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-right: 10px;
+}
+
+.selected {
+  color: white;
+  background-color: var(--blue);
+}
+
+@media screen and (min-width: 960px) {
+  .cardContainer {
+    padding: 20px 150px;
+  }
+  .classSection {
+    padding: 0px 350px;
+  }
+}

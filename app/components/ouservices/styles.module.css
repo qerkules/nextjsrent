@@ -1,0 +1,134 @@
+.container {
+  padding: 10px;
+  margin-bottom: 30px;
+}
+
+.whyChoose {
+  background-color: var(--lightblue);
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: var(--blue);
+  font-size: 14px;
+}
+
+.detailsSection {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.infoSection {
+  display: flex;
+}
+
+.iconContainer {
+  background-color: var(--lightblue);
+  border-radius: 20px;
+  padding: 17px;
+  color: var(--blue);
+  font-size: 25px;
+  display: flex;
+  align-items: center;
+}
+
+.title {
+  margin-top: 15px;
+  font-weight: 400;
+}
+
+.infoSection {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.infoCard {
+  display: flex;
+  margin-bottom: 15px;
+  width: 300px;
+  align-items: center;
+}
+
+.infoBox {
+  margin-left: 15px;
+}
+
+.infoTitle {
+  margin-bottom: 7px;
+  font-size: 16px;
+}
+
+.infoSubtitle {
+  font-size: 12px;
+  color: var(--subtitle);
+}
+
+.sectionImgContainer {
+  background: rgb(0, 0, 237);
+  background: radial-gradient(
+    circle,
+    var(--blue) 0%,
+    rgba(255, 255, 255, 1) 50%
+  );
+  flex: 1;
+}
+
+.sectionImg {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 960px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 50px 0px;
+  }
+
+  .detailsSection {
+    flex: 1;
+  }
+
+  .sectionImgContainer {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-top: 30px;
+  }
+  .sectionImg {
+    width: 500px;
+    height: 500px;
+  }
+
+}
+
+@media (min-width: 450px) and (max-width: 960px) {
+  .sectionImg {
+    width: 400px;
+  }
+
+  .sectionImgContainer {
+    background: rgb(0, 0, 237);
+    background: radial-gradient(
+      circle,
+      var(--blue) 0%,
+      rgba(255, 255, 255, 1) 40%
+    );
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .detailsSection {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+  }
+
+}
