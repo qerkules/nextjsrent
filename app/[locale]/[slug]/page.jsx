@@ -38,7 +38,9 @@ const Carpage = async ({ params }) => {
     returnDate: t("returnDate"),
     pickUpDate: t("pickUpDate"),
   };
-  const data = await fetch(`https:rentacarm.vercel.app/car/${params.slug}`)
+  const data = await fetch(
+    `${process.env.NEXT_PUBLIC_DATA_LINK}/car/${params.slug}`
+  )
     .then((response) => response.json())
     .catch((err) => console.log(err));
 
@@ -46,9 +48,8 @@ const Carpage = async ({ params }) => {
     redirect(`/${local}`);
   }
 
-  let carReq = await fetch("https:rentacarm.vercel.app/car");
+  let carReq = await fetch(`${process.env.NEXT_PUBLIC_DATA_LINK}/car`);
   let cars = await carReq.json();
-
 
   const carClass = () => {
     if (data) {
@@ -146,7 +147,8 @@ const Carpage = async ({ params }) => {
           <div className={`${styles.priceSection}`}>
             <div>
               <div className={`${styles.price}`}>
-                &nbsp; {local === "az" ? `₼${data.priceAzn}` : `$ ${data.priceUsd}`}{" "}
+                &nbsp;{" "}
+                {local === "az" ? `₼${data.priceAzn}` : `$ ${data.priceUsd}`}{" "}
                 <span className={`${styles.day}`}>/{t("day")}</span>{" "}
               </div>
               <p className={`${styles.tip}`}>{t("priceTip")}</p>

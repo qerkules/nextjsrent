@@ -10,8 +10,7 @@ import CarClasses from "./CarClasses";
 const Homepage = async () => {
   const t = useTranslations("Index");
 
-  // https://rentacarm.vercel.app/car/filter/Middle%20Class
-  let req = await fetch("https://rentacarm.vercel.app/car");
+  let req = await fetch(`${process.env.NEXT_PUBLIC_DATA_LINK}/car`);
   let data = await req.json();
 
   const availableCars = () => {
