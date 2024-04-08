@@ -23,7 +23,7 @@ const Footer = () => {
           </Link> */}
 
           <div className={`${styles.contactTitle}`}>Contact Options</div>
-          <div className={`${styles.contactEmail}`}>mmehemmsd@gmail.com</div>
+          <div className={`${styles.contactEmail}`}>rentacarsinbaku@gmail.com</div>
           <div className={`${styles.contactNumbers}`}>
             <p>+994105407474</p>
           </div>
