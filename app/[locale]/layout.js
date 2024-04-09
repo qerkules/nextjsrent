@@ -12,7 +12,6 @@ export default function LocaleLayout({ children, params: { locale } }) {
   return (
     <html lang={locale}>
       <head>
-        <link rel="icon" href="../../public/favicon.ico" sizes="any" />
       </head>
       <body>{children}</body>
     </html>
