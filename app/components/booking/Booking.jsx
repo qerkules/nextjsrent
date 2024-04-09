@@ -69,7 +69,7 @@ const Booking = ({ carName, messages }) => {
         returnDate: returnDate,
         returnLocation: returnLocation,
       });
-      alert("email successfully sent check inbox");
+      alert("Email successfully sent, Wait for the offer");
     } catch (error) {
       console.log(error);
     }
