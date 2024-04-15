@@ -99,6 +99,7 @@ const Booking = ({ carName, messages }) => {
                 aria-labelledby="demo-row-radio-buttons-group-label"
                 name="row-radio-buttons-group"
                 required
+                className={`${styles.radioGroup}`}
               >
                 <FormControlLabel
                   label={messages.airport}
@@ -147,6 +148,7 @@ const Booking = ({ carName, messages }) => {
                 aria-labelledby="demo-row-radio-buttons-group-label"
                 name="row-radio-buttons-group"
                 required
+                className={`${styles.radioGroup}`}
               >
                 <FormControlLabel
                   value="Airport"
