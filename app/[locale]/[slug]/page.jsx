@@ -21,6 +21,7 @@ import Footer from "@/app/components/footer/Footer";
 import { redirect } from "next/navigation";
 import Booking from "@/app/components/booking/Booking";
 import Link from "next/link";
+import Whatsapp from "@/app/components/whatsapp/Whatsapp";
 
 const Carpage = async ({ params }) => {
   const t = await getTranslations("Index");
@@ -101,6 +102,7 @@ const Carpage = async ({ params }) => {
           content="You can find every details about all cars model and book easy just one click"
         />
       </Head>
+      <Whatsapp />
       <div className={`${styles.desktopVersion}`}>
         <div className={`${styles.leftSection}`}>
           <Slider images={data.images} />

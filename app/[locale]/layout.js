@@ -5,7 +5,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Rent a cars In Baku",
-  description: "The best price perfomant rent a car in Baku",
+  description: "The best price performant rental cars in Baku",
 };
 
 export default function LocaleLayout({ children, params: { locale } }) {
