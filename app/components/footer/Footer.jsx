@@ -16,14 +16,16 @@ const Footer = () => {
           />
           {/* <Link href="about-us" className={styles.pageLink}>
             About us
+          </Link>*/}
+
+          <Link href="en/privacy-policy" className={styles.pageLink}>
+            Privacy Policy
           </Link>
 
-          <Link href="privacy-policy" className={styles.pageLink}>
-            Privacy Policy
-          </Link> */}
-
           <div className={`${styles.contactTitle}`}>Contact Options</div>
-          <div className={`${styles.contactEmail}`}>rentacarsinbaku@gmail.com</div>
+          <div className={`${styles.contactEmail}`}>
+            rentacarsinbaku@gmail.com
+          </div>
           <div className={`${styles.contactNumbers}`}>
             <p>+994105407474</p>
           </div>
