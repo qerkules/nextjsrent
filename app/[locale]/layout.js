@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -11,8 +12,7 @@ export const metadata = {
 export default function LocaleLayout({ children, params: { locale } }) {
   return (
     <html lang={locale}>
-      <head>
-      </head>
+      <GoogleAnalytics gaId="G-61MC0JMJPC" />
       <body>{children}</body>
     </html>
   );
