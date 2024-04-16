@@ -4,7 +4,7 @@ import { FaWhatsapp } from "react-icons/fa";
 
 const Whatsapp = () => {
   return (
-    <a className={`${styles.container}`} href="https://wa.me/+994553151777" >
+    <a className={`${styles.container}`} href="https://wa.me/+994105407474" >
       <FaWhatsapp className={`${styles.icon}`} />
     </a>
   );
