@@ -8,7 +8,7 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
-import { Checkbox, TextField } from "@mui/material";
+import { Checkbox, FormGroup, TextField } from "@mui/material";
 import emailjs from "@emailjs/browser";
 
 const Booking = ({ carName, messages }) => {
@@ -54,7 +54,7 @@ const Booking = ({ carName, messages }) => {
       <div className={`${styles.contentContainer}`}>
         <div className={`${styles.carName}`}>{carName}</div>
 
-        <FormControl>
+        <FormGroup>
           <div className={`${styles.pickupSection}`}>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <DatePicker
@@ -215,7 +215,7 @@ const Booking = ({ carName, messages }) => {
           <div className={`${styles.bookNow}`} onClick={handleSubmit}>
             {messages.book}
           </div>
-        </FormControl>
+        </FormGroup>
       </div>
     </div>
   );

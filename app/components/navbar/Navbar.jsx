@@ -26,6 +26,14 @@ const Navbar = () => {
           />
           <span>{t("aze")}</span>
         </Link>
+        <Link className={`${styles.language}`} href="/tr">
+          <img
+            alt="Turkey"
+            src="https://purecatamphetamine.github.io/country-flag-icons/3x2/TR.svg"
+            className={`${styles.flag}`}
+          />
+          <span>{t("tr")}</span>
+        </Link>
         <Link className={`${styles.language}`} href="/en">
           <img
             alt="United States"
