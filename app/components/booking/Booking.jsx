@@ -8,70 +8,44 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
-import { Checkbox, FormGroup, TextField } from "@mui/material";
+import { Checkbox, TextField } from "@mui/material";
 import emailjs from "@emailjs/browser";
 
 const Booking = ({ carName, messages }) => {
   useEffect(() => {
     emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_KEY);
   }, []);
-  const [pickUpDate, setPickUpDate] = React.useState();
-  const [returnDate, setReturnDate] = React.useState();
-  const [pickUpLocation, setPickUpLocation] = React.useState();
-  const [returnLocation, setReturnLocation] = React.useState();
+  const [pickUpDate, setPickUpDate] = React.useState("");
+  const [returnDate, setReturnDate] = React.useState("");
+  const [pickUpLocation, setPickUpLocation] = React.useState("");
+  const [returnLocation, setReturnLocation] = React.useState("");
   const [name, setName] = React.useState("");
   const [surname, setSurname] = React.useState("");
   const [phoneNumber, setPhoneNumber] = React.useState("");
   const [email, setEmail] = React.useState("");
-
-  const [returnDateError, setReturnDateError] = React.useState();
-  const [returnLocationError, setReturnLocationError] = React.useState();
-  const [pickUpDateError, setPickUpDateError] = React.useState();
-  const [pickUpLocationError, setPickUpLocationError] = React.useState();
-  const [nameError, setNameError] = React.useState("");
-  const [surnameError, setSurnameError] = React.useState("");
-  const [phoneNumberError, setPhoneNumberError] = React.useState("");
-  const [emailError, setEmailError] = React.useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
     const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
 
-    !email ? setEmailError("please insert email") : setEmailError("");
-    !pickUpDate
-      ? setPickUpDateError("please insert pick-up date")
-      : setPickUpDateError("");
-    !returnDate
-      ? setReturnDateError("please insert return date")
-      : setReturnDateError("");
-    !pickUpLocation
-      ? setPickUpLocationError("please select pick up location")
-      : setPickUpLocationError("");
-    !returnLocation
-      ? setReturnLocationError("please select return location")
-      : setReturnLocationError("");
-    !name ? setNameError("please insert name") : setNameError("");
-    !surname ? setSurnameError("please insert surname") : setSurnameError("");
-    !phoneNumber
-      ? setPhoneNumberError("please insert Whatsapp Number")
-      : setPhoneNumberError("");
-
-    try {
-      await emailjs.send(serviceId, templateId, {
-        car: carName,
-        name: name,
-        surname: surname,
-        phoneNumber: phoneNumber,
-        email: email,
-        pickUpDate: pickUpDate,
-        pickUpLocation: pickUpLocation,
-        returnDate: returnDate,
-        returnLocation: returnLocation,
-      });
-      alert("Email successfully sent, Wait for the offer");
-    } catch (error) {
-      console.log(error);
+    if (email !== "" && name !== "" && surname !== "" && phoneNumber !== "") {
+      try {
+        await emailjs.send(serviceId, templateId, {
+          car: carName,
+          name: name,
+          surname: surname,
+          phoneNumber: phoneNumber,
+          email: email,
+          pickUpDate: pickUpDate,
+          pickUpLocation: pickUpLocation,
+          returnDate: returnDate,
+          returnLocation: returnLocation,
+        });
+        alert("Email successfully sent, Wait for the offer");
+      } catch (error) {
+        console.log(error);
+      }
     }
   };
 
@@ -80,7 +54,7 @@ const Booking = ({ carName, messages }) => {
       <div className={`${styles.contentContainer}`}>
         <div className={`${styles.carName}`}>{carName}</div>
 
-        <FormGroup>
+        <FormControl>
           <div className={`${styles.pickupSection}`}>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
               <DatePicker
@@ -191,6 +165,7 @@ const Booking = ({ carName, messages }) => {
                 setName(newValue.target.value);
               }}
               required
+              error={name === ""}
             />
             <TextField
               id="standard-basic"
@@ -200,6 +175,7 @@ const Booking = ({ carName, messages }) => {
               value={surname}
               onChange={(newValue) => setSurname(newValue.target.value)}
               required
+              error={surname === ""}
             />
           </div>
 
@@ -212,7 +188,9 @@ const Booking = ({ carName, messages }) => {
               value={phoneNumber}
               onChange={(newValue) => setPhoneNumber(newValue.target.value)}
               required
+              error={phoneNumber === ""}
             />
+
             <TextField
               id="standard-basic"
               label={messages.email}
@@ -224,6 +202,7 @@ const Booking = ({ carName, messages }) => {
               }}
               autoComplete="email"
               required
+              error={email === ""}
             />
           </div>
           <div className={`${styles.dFlex}`}>
@@ -236,7 +215,7 @@ const Booking = ({ carName, messages }) => {
           <div className={`${styles.bookNow}`} onClick={handleSubmit}>
             {messages.book}
           </div>
-        </FormGroup>
+        </FormControl>
       </div>
     </div>
   );
