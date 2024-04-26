@@ -20,6 +20,8 @@ const Header = () => {
             src={CamryImg}
             alt="rent a car in baku header"
             loading="eager"
+            width={500}
+            height={500}
           />
         </div>
       </div>
