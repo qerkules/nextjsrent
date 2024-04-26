@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emailjs/browser": "^4.3.3",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@iconify/icons-mdi": "^1.2.48",
@@ -18,7 +17,6 @@
     "@mui/x-date-pickers": "^7.1.1",
     "dayjs": "^1.11.10",
     "dotenv": "^16.4.5",
-    "emailjs": "^4.0.3",
     "i18next": "^23.10.1",
     "next": "^14.2.1",
     "next-intl": "^3.11.1",

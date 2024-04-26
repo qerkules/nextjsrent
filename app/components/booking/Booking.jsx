@@ -8,40 +8,22 @@ import Radio from "@mui/material/Radio";
 import RadioGroup from "@mui/material/RadioGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import FormControl from "@mui/material/FormControl";
-import { Checkbox, FormGroup, TextField } from "@mui/material";
-import emailjs from "@emailjs/browser";
+import { Checkbox, FormGroup } from "@mui/material";
 
 const Booking = ({ carName, messages }) => {
-  useEffect(() => {
-    emailjs.init(process.env.NEXT_PUBLIC_EMAILJS_KEY);
-  }, []);
   const [pickUpDate, setPickUpDate] = React.useState("");
   const [returnDate, setReturnDate] = React.useState("");
   const [pickUpLocation, setPickUpLocation] = React.useState("");
   const [returnLocation, setReturnLocation] = React.useState("");
-  const [name, setName] = React.useState("");
-  const [surname, setSurname] = React.useState("");
-  const [phoneNumber, setPhoneNumber] = React.useState("");
-  const [email, setEmail] = React.useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
 
-    if (email !== "" && name !== "" && surname !== "" && phoneNumber !== "") {
+    if (pickUpDate !== "" && returnDate !== "" && pickUpLocation !== "" && returnLocation !== "") {
       try {
-        await emailjs.send(serviceId, templateId, {
-          car: carName,
-          name: name,
-          surname: surname,
-          phoneNumber: phoneNumber,
-          email: email,
-          pickUpDate: pickUpDate,
-          pickUpLocation: pickUpLocation,
-          returnDate: returnDate,
-          returnLocation: returnLocation,
-        });
+        const url = `https://wa.me/+994105407474?text=Car%20Name%3A%20${carName}%0APick%20up%20date%3A%20${pickUpDate}%20${pickUpLocation}%0AReturn%20Date%3A%20${returnDate}%20${returnLocation}%0A%0A`;
+        window.open(url, "_blank", "noopener,noreferrer");
+
         alert("Email successfully sent, Wait for the offer");
       } catch (error) {
         console.log(error);
@@ -152,59 +134,6 @@ const Booking = ({ carName, messages }) => {
             </FormControl>
           </div>
 
-          <div>{messages.contact}</div>
-
-          <div className={`${styles.dFlex}`}>
-            <TextField
-              id="standard-basic"
-              label={messages.name}
-              variant="standard"
-              className={`${styles.mRight} ${styles.mWidth}`}
-              value={name}
-              onChange={(newValue) => {
-                setName(newValue.target.value);
-              }}
-              required
-              error={name === ""}
-            />
-            <TextField
-              id="standard-basic"
-              label={messages.surname}
-              variant="standard"
-              className={`${styles.mWidth}`}
-              value={surname}
-              onChange={(newValue) => setSurname(newValue.target.value)}
-              required
-              error={surname === ""}
-            />
-          </div>
-
-          <div className={`${styles.dFlex}`}>
-            <TextField
-              id="standard-basic"
-              label={messages.number}
-              variant="standard"
-              className={`${styles.mRight} ${styles.mWidth}`}
-              value={phoneNumber}
-              onChange={(newValue) => setPhoneNumber(newValue.target.value)}
-              required
-              error={phoneNumber === ""}
-            />
-
-            <TextField
-              id="standard-basic"
-              label={messages.email}
-              variant="standard"
-              className={`${styles.mWidth}`}
-              value={email}
-              onChange={(value) => {
-                setEmail(value.target.value);
-              }}
-              autoComplete="email"
-              required
-              error={email === ""}
-            />
-          </div>
           <div className={`${styles.dFlex}`}>
             <FormControlLabel
               required
