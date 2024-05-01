@@ -25,15 +25,6 @@ export default function LocaleLayout({ children, params: { locale } }) {
              webvisor:true
         });`}
       </Script>
-      <noscript>
-        <div>
-          <img
-            src="https://mc.yandex.ru/watch/97137271"
-            style={{position: absolute, left: -9999}}
-            alt=""
-          />
-        </div>
-      </noscript>
       <body>{children}</body>
     </html>
   );
