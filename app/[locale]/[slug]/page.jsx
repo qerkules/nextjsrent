@@ -40,7 +40,7 @@ const Carpage = async ({ params }) => {
     pickUpDate: t("pickUpDate"),
   };
   const data = await fetch(
-    `${process.env.NEXT_PUBLIC_DATA_LINK}/car/${params.slug}`
+    `${process.env.NEXT_PUBLIC_DATA_LINK}/${params.slug}`
   )
     .then((response) => response.json())
     .catch((err) => console.log(err));
@@ -49,7 +49,7 @@ const Carpage = async ({ params }) => {
     redirect(`/${local}`);
   }
 
-  let carReq = await fetch(`${process.env.NEXT_PUBLIC_DATA_LINK}/car`);
+  let carReq = await fetch(`${process.env.NEXT_PUBLIC_DATA_LINK}`);
   let cars = await carReq.json();
 
   const carClass = () => {

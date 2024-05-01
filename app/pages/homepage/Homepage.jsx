@@ -10,7 +10,7 @@ import CarClasses from "./CarClasses";
 const Homepage = async () => {
   const t = useTranslations("Index");
 
-  let req = await fetch(`${process.env.NEXT_PUBLIC_DATA_LINK}/car`);
+  let req = await fetch(`${process.env.NEXT_PUBLIC_DATA_LINK}`);
   let data = await req.json();
 
   const availableCars = () => {
