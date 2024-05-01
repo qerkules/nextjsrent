@@ -29,7 +29,7 @@ export default function LocaleLayout({ children, params: { locale } }) {
         <div>
           <img
             src="https://mc.yandex.ru/watch/97137271"
-            style="position:absolute; left:-9999px;"
+            style={{position: absolute, left: -9999}}
             alt=""
           />
         </div>
