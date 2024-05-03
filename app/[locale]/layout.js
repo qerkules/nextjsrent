@@ -1,7 +1,6 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
-import Head from "next/head"
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -13,7 +12,7 @@ export default function LocaleLayout({ children, params: { locale } }) {
   return (
     <html lang={locale}>
       <head>
-        <script type="text/javascript">
+        <Script type="text/javascript">
           {`(function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
         m[i].l=1*new Date();
         for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
@@ -26,8 +25,7 @@ export default function LocaleLayout({ children, params: { locale } }) {
           accurateTrackBounce:true,
           webvisor:true
         });`}
-        </script>
-        <meta name="yandex-verification" content="b17f4878682a8629" />
+        </Script>
         <noscript>
           <div>
             <img
@@ -37,6 +35,7 @@ export default function LocaleLayout({ children, params: { locale } }) {
             />
           </div>
         </noscript>
+        <meta name="yandex-verification" content="b17f4878682a8629" />
       </head>
       <body>{children}</body>
     </html>
