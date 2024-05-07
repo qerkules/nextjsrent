@@ -62,6 +62,8 @@ const Carpage = async ({ params }) => {
         return t("suvClass");
       } else if (data.class === "Premium Class") {
         return t("premiumClass");
+      } else if (data.class === "Cabrio Class") {
+        return t("cabrioClass");
       }
     }
   };
@@ -80,6 +82,8 @@ const Carpage = async ({ params }) => {
         return t("sedan");
       } else if (data.mainDetails.type === "Suv") {
         return t("suv");
+      } else if (data.mainDetails.type === "Cabrio") {
+        return t("cabrio");
       }
     }
   };

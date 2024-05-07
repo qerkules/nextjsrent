@@ -28,6 +28,8 @@
     "middleClass": "Orta Sinif",
     "premiumClass": "Premium Sinif",
     "suvClass": "Suv Sinif",
+    "cabrioClass": "Kabriolet Sinif",
+    "cabrio": "Kabriolet",
     "sedan": "Sedan",
     "suv": "Suv",
     "auto": "Avtomat",

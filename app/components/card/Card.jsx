@@ -18,6 +18,8 @@ const Card = ({ car }) => {
       return t("suvClass");
     } else if (car.class === "Premium Class") {
       return t("premiumClass");
+    } else if (car.class === "Cabrio Class") {
+      return t("cabrioClass");
     }
   };
 
@@ -34,6 +36,8 @@ const Card = ({ car }) => {
       return t("sedan");
     } else if (car.mainDetails.type === "Suv") {
       return t("suv");
+    } else if (car.mainDetails.type === "Cabrio") {
+      return t("cabrio");
     }
   };
   return (
